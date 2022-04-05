@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        a{
+            text-decoration: none;
+            /*text-align: center;*/
+        }
+
+        ul{
+            list-style: none;
+            /*line-height: 30px;*/
+        }
+
+        #menu li{
+            float: left;
+            margin-right: 5px;
+        }
+
+        #menu .main-menu{
+            width: 120px;
+            height: 30px;
+            display: block;
+            background-color: #cccccc;
+            line-height: 30px;
+        }
+
+        #menu{
+            cursor: pointer;
+        }
+
+        #menu .sub-menu li{
+            float: none;
+            /*to make sure when the first li child move, fix the others li*/
+            border: 1px dotted #000;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        #menu .sub-menu {
+            background-color: #ddd;
+            display: none;
+        }
+
+        #menu > li:hover .sub-menu{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+<ul id="menu">
+    <li>
+        <a href="#" class="main-menu">link1</a>
+        <ul class="sub-menu">
+            <li><a href="#">sublink 1</a></li>
+            <li><a href="#">sublink 2</a></li>
+            <li><a href="#">sublink 3</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#" class="main-menu">link2</a>
+        <ul class="sub-menu">
+            <li><a href="#">sublink 1</a></li>
+            <li><a href="#">sublink 2</a></li>
+            <li><a href="#">sublink 3</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#" class="main-menu">link3</a>
+        <ul class="sub-menu">
+            <li><a href="#">sublink 1</a></li>
+            <li><a href="#">sublink 2</a></li>
+            <li><a href="#">sublink 3</a></li>
+        </ul>
+    </li>
+</ul>
+
+</body>
+</html>
