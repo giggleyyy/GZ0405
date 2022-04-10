@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        ul{
+            list-style: none;
+        }
+
+
+        #menu li{
+            float: left;
+            background-color: #ddd;
+            margin-right: 10px;
+            width: 120px;
+            height: 30px;
+        }
+        #menu .sub-menu li{
+            float: none;
+
+        }
+        #menu .main-menu{
+            background-color: #ccc;
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+            display: block;
+        }
+        .sub-menu{
+           display: none;
+        }
+    </style>
+</head>
+<body>
+<ul id="menu">
+    <li>
+        <a href="#" class="main-menu">link1</a>
+        <ul class="sub-menu">
+            <li><a href="#">sublink 1</a></li>
+            <li><a href="#">sublink 2</a></li>
+            <li><a href="#">sublink 3</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#" class="main-menu">link2</a>
+        <ul class="sub-menu">
+            <li><a href="#">sublink 1</a></li>
+            <li><a href="#">sublink 2</a></li>
+            <li><a href="#">sublink 3</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#" class="main-menu">link3</a>
+        <ul class="sub-menu">
+            <li><a href="#">sublink 1</a></li>
+            <li><a href="#">sublink 2</a></li>
+            <li><a href="#">sublink 3</a></li>
+        </ul>
+    </li>
+</ul>
+<script>
+    var oMenu = document.getElementById("menu");
+    var aLi = oMenu.children;
+    // var aSubMenu = oMenu.getElementsByClassName("sub-menu");
+    for (var i=0; i<aLi.length; i++){
+        aLi[i].onmouseover = function (){
+            this.getElementsByTagName('ul')[0].style.display = 'block';
+        }
+        aLi[i].onmouseout = function (){
+            this.children[1].style.display = 'none';
+        }
+    }
+
+</script>
+</body>
+</html>
